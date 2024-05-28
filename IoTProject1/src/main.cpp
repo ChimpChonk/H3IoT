@@ -17,11 +17,13 @@ void setup() {
 }
 
 void loop() {
+  noInterrupts();
   if(x)
   {
-    Serial.println("This is an interrupt button click.");
     x--;
+    Serial.println("This is an interrupt button click.");
   }
+  interrupts();
   // vTaskDelay(10);
 
   // if(!digitalRead(GPIO_NUM_27))
