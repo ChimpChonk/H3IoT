@@ -16,7 +16,7 @@ void setup() {
   }
 
   File file = LittleFS.open("/config.txt", "r");
-  if(!file)
+  if(!file) 
   {
     Serial.println("Error opening file for reading");
     return;
